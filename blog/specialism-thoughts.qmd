@@ -8,3 +8,10 @@ categories:
     - Reflective Thinking
     - Personal Entry
 ---
+
+> For my final year, I opted for data analytics as my specialism. I previously enjoyed the module "Business Analytics" in my second year and was interested in coding outside of school, which is why I made this decision. In the first semester, we had the module "Data Visualisation and Programming," where we worked with three tools heavily discussed in the data analytics world: SQL, Python, and Power BI. Of course, it was challenging, but it was exhilarating when I could finally get a block of code to work or convey my exact thoughts through a visualisation, which is not easy. 
+
+> Fast-forward to the second semester, I am building a website (something I never imagined I could do) and have built machine learning algorithms to train a dataset. The specialism was incredibly useful and allowed me to test and become proficient in most fields required of me after graduation. I will be able to walk into the industry with experience, rather than arriving empty-handed, making me a promising candidate willing to progress further. 
+
+
+
