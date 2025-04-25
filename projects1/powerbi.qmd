@@ -30,9 +30,13 @@ This dashboard was designed for an automobile company navigating Q3. Due to Powe
 <iframe src="for-download/automobile-powerbi.pdf" width="80%" height="450px"></iframe>
 [Download the dashboard!](for-download/automobile-dashboard.pbix) 
 
+### Corresponding slide deck {{< fa file-powerpoint >}}
 
+[Download the group slide deck!](for-download/presentation-powerbi.pptx)
 
+[^1]: [Speaks about cars and its connection to seasonal buying behaviours](https://www.marketplace.org/story/2019/12/05/do-people-really-buy-cars-as-holiday-gifts)
 
+[^2]: [Electric vehicles in the market](https://www.canarymedia.com/articles/electric-vehicles/the-us-ev-industry-faces-a-bumpy-road-ahead)
 
 
 
