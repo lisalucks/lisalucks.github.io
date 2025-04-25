@@ -6,12 +6,12 @@ project:
   output-dir: docs
 
 website:
-  title: "Lisa Lucky"
+  title: "My Name"
   favicon: assets/favicon1.png
   navbar:
     title: false
     logo: assets/logo6.png
-    alt: "Lisa Lucky"
+    alt: "My name"
     href: "/"
     right:
       - href: index.qmd
@@ -24,18 +24,20 @@ website:
             text: English Version
           - href: german-cv.pdf
             text: German Version
-      - href: projects1/index.qmd
+      - href: /projects1/index.html
         text: Projects
-      - href: blog/index.qmd
+        
+      - href: /blog/index.html
         text: Blog
 
+
   page-footer:
-    left: Copyright 2025, Lisa Lucky
+    left: Copyright 2025, name
     right: 
     - icon: github
-      href: https://github.com/lisalucks
+      href: link
     - icon: linkedin
-      href: https://www.linkedin.com/in/lisa-lucky-157222358/
+      href: link
 
 
 format:

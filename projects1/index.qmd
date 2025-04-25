@@ -1,3 +1,14 @@
 ---
-title: temporary title
+title: Welcome to my projects and assignments page!
+subtitle: can i add stuff here?
+listing:
+   contents: 
+         /
+   sort: "date"
+   type: grid
+   categories: true
+fields: 
+   - title
+   - image 
+   - description
 ---

@@ -41,8 +41,8 @@ listing:
 
   - id: recent-blog-listing
     contents:
-    - "Blog/*.qmd"
-    - "!Blog/index.qmd"
+    - "blog/*.qmd"
+    - "!blog/index.qmd"
     sort: "date desc"
     type: grid
     max-items: 9
