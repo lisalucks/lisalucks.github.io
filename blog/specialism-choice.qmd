@@ -2,6 +2,7 @@
 title: "Why did I choose this specialism?"
 description: "One of the key moments that sparked my passion for data analytics was a video featuring a day in the life of a data scientist. She discusses how she creates value within her organisation through ML models, business insights, and managing projects."
 author: "Lisa Lucky"
+toc: false
 date: "1/14/2025"
 image: "photos-blog/specialism-choice.jpg"
 categories:

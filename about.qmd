@@ -71,5 +71,6 @@ Furthermore, I enjoy music and dance! To keep fit, I practice choreography and h
 
 
 
-<!--circular image to scss idea, meter bar and download CV function - coding assistance with ChatGPT-->
+<!-- Circular image to scss idea, meter bar and download CV function - coding assistance with ChatGPT-->
 <!-- Layout style inspired by Damien Dupre's "About" Page. Available here: https://damien-dupre.github.io/about.html-->
+<!-- Font Awesome extension used-->
