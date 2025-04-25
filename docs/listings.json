@@ -3,16 +3,16 @@
     "listing": "/projects1/index.html",
     "items": [
       "/projects1/powerbi.html",
-      "/projects1/recommendation.html",
-      "/projects1/sqlmovie.html"
+      "/projects1/sqlmovie.html",
+      "/projects1/recommendation.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
       "/projects1/sqlmovie.html",
-      "/projects1/powerbi.html",
-      "/projects1/recommendation.html"
+      "/projects1/recommendation.html",
+      "/projects1/powerbi.html"
     ]
   }
 ]

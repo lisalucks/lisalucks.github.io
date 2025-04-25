@@ -1,8 +1,8 @@
 ---
-title: "Python Movie Recommendation System"
-description: "Change"
+title: "Disney Movie Recommendation System"
+description: "This Python project uses techniques such as Cosine Similarity and TF-IDF Vectorisation to choose similar Disney movies, based on descriptions."
 author: "Lisa Lucky"
-date: "4/21/2025"
-image: "project-photos/power-bi-header.jpg"
+date: "4/24/2025"
+image: "project-photos/movie-rec-header1.jpg"
 categories: [Python, Big Data]
 ---
