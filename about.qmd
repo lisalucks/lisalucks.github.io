@@ -8,3 +8,19 @@ toc: false
 ## ![About me](assets/logo6.png){.circular-image}
 
 About this site
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--circular image to scss idea through coding assistance with ChatGPT-->
