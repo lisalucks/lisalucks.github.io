@@ -1,11 +1,11 @@
 ---
-title: About
+title: About me
 about:
    template: marquee
 toc: false
 ---
 
-## ![About me](assets/logo6.png){.circular-image}
+## ![About me](assets/about-me-photo.jpg){.circular-image}
 
 ### My Journey {{< fa user-check >}}
 

@@ -27,7 +27,7 @@ website:
       - href: /projects1/index.html
         text: Projects
         
-      - href: /blog/index.html
+      - href: blog/index.qmd
         text: Blog
 
 
