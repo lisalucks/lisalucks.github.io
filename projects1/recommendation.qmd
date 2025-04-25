@@ -1,0 +1,8 @@
+---
+title: "Python Movie Recommendation System"
+description: "Change"
+author: "Lisa Lucky"
+date: "4/21/2025"
+image: "project-photos/power-bi-header.jpg"
+categories: [Python, Big Data]
+---
