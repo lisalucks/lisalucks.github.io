@@ -21,5 +21,12 @@ I have embedded a video below about data analytics and its importance in today's
 height= "400"></iframe>
 ```
 
+### Building a website: code with me (Steph Ran)
+My site and other videos show that making something aesthetically pleasing is important to me. As I previously used the code editor "Spyder" in my first semester, I worried that switching to VS Code may have disadvantaged me. Especially when I heard others around me who had more experience with it. Now I have created my website (which you are currently on!), which shows how far I've come. This was a nice introductory video for me to get excited about website building, from seeing the VS Code in the video to seeing her thoughtfulness in the web design. I started to get better encouraged. Motivation is motivation, whilst the video is not too overly informative, it was an ice breaker! 
+
+```{=html}
+<iframe src= "https://www.youtube.com/embed/ac-rvXHopbw?si=vxkLFwzpBUEimhkv" width="700"
+height= "400"></iframe>
+
 
 
