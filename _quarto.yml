@@ -6,6 +6,8 @@ website:
   title: "Lisa Lucky"
   favicon: assets/favicon1.png
   navbar:
+    title: false
+    logo: assets/logo6.png
     left:
       - href: index.qmd
         text: Home
