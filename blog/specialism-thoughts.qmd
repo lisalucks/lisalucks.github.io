@@ -2,6 +2,7 @@
 title: Thoughts After Completing the Data Analytics Specialism
 description: I talk reflectively about completing the data analytics specialism in DCU and how this will shape and impact my future career Below, I have also included some forms of media which inspired me, thus allowing me to stay diligent with my efforts and expanding on my technical abilities.
 date: "4/22/2025"
+image: photos-blog/thoughts-image.jpg
 toc: true
 author: Lisa Lucky, CareerFoundry, Visual Studio Code & Adam Finer
 categories:
@@ -77,4 +78,7 @@ height= "400"></iframe>
   <p>Python is of course the main programming language which I have sufficient experience with. It begs the question, what exactly does programming and business have in common and why does this make me unique?</p>
   <p class="reflection"><strong>My Takeaway:</strong> During my time in this specialism, there has been an emphasis placed on Python. Whether that be for data cleaning, calling particular functions etc. The article explains Python's variability. Visualisations, machine learning and positively contributing to artificial intelligence.</p>
 </div>
+
+<!--Photo from Unsplash by: Stephen Dawson: https://unsplash.com/photos/turned-on-monitoring-screen-qwtCeJ5cLYs-->
+
 
