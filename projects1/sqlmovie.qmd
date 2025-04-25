@@ -266,4 +266,5 @@ Sourcing for code from following websites as well as footnotes above.
 * [Coding assistance - ChatGPT](https://chatgpt.com/)
 
 
-<!--Image for header from Unsplash by: Felix Mooneeram-->
+<!--Image for header from Unsplash by: Felix Mooneeram
+Available at: https://unsplash.com/photos/red-cinema-chair-evlkOfkQ5rE-->

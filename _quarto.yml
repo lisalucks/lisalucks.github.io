@@ -6,12 +6,12 @@ project:
   output-dir: docs
 
 website:
-  title: "My Name"
+  title: "Lisa Lucky"
   favicon: assets/favicon1.png
   navbar:
     title: false
     logo: assets/logo6.png
-    alt: "My name"
+    alt: "Lisa Lucky"
     href: "/"
     right:
       - href: index.qmd
@@ -32,12 +32,12 @@ website:
 
 
   page-footer:
-    left: Copyright 2025, name
+    left: Copyright 2025, Lisa Lucky
     right: 
     - icon: github
-      href: link
+      href: https://github.com/lisalucks
     - icon: linkedin
-      href: link
+      href: https://www.linkedin.com/in/lisa-lucky-157222358/
 
 
 format:
