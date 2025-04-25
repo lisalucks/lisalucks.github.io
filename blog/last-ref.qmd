@@ -1,0 +1,10 @@
+---
+title: Loop Reflect Portfolio (A comparison) - Final Reflection
+description: In my third year, I got the chance to go on Erasmus. I attended one of Germany's most prestigious and well-known universities (Technical University of Munich). During this year, we were tasked to write reflections every so often to outline our cultural development. Below I have put my final reflection, which I submitted from that year. I hope to showcase how I became more comfortable and broadened my abilities to navigate cultural contexts. It is rather text heavy, therfore I have included a callout function to summarise the post. 
+author: "Lisa Lucky"
+date: 4/22/2025
+categories: 
+    - Erasmus 
+    - Reflective Thinking 
+    - Culture
+---

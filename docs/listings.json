@@ -1,5 +1,14 @@
 [
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/specialism-choice.html",
+      "/blog/first-ref.html",
+      "/blog/last-ref.html",
+      "/blog/specialism-thoughts.html"
+    ]
+  },
+  {
     "listing": "/projects1/index.html",
     "items": [
       "/projects1/powerbi.html",
@@ -14,16 +23,9 @@
       "/projects1/recommendation.html",
       "/projects1/powerbi.html",
       "/blog/first-ref.html",
+      "/blog/last-ref.html",
       "/blog/specialism-thoughts.html",
       "/blog/specialism-choice.html"
-    ]
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/specialism-choice.html",
-      "/blog/specialism-thoughts.html",
-      "/blog/first-ref.html"
     ]
   }
 ]
