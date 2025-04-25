@@ -22,4 +22,26 @@ about:
       target: _blank
 ---
 
+:::{#hero-heading}
 # Welcome to my page!
+
+My name is Lisa Lucky! I am 22 years old and currently in my final year at Dublin City University [(DCU)](https://www.dcu.ie/), pursuing a unique bachelor’s degree that combines my passions for business, language, and data analytics. My focus language is German, and I had the incredible opportunity to study abroad at the Technical University of Munich [(TUM)](https://www.tum.de/en/) during my third year, which further deepened my love for language and culture.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Layout style (especially listing and hero-heading code) inspired and adapted from Damien Dupre's "About" Page and Garrick Aden-Buie https://www.garrickadenbuie.com/. Available through: https://damien-dupre.github.io/about.html and https://www.garrickadenbuie.com/ -->
+
+<!--Coding layout (including buttons etc) adapted from Sam Shanny-Csik https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide -->
