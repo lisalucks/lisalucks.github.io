@@ -20,6 +20,37 @@ about:
       text: Email 
       href: mailto:lisa.lucky2@mail.dcu.ie
       target: _blank
+
+listing: 
+  - id: recent-projects1-listing
+    contents: 
+    - projects1
+    - "!projects1/index.qmd"
+    sort: "date desc"
+    type: grid
+    max-items: 9
+    page-size: 3
+    categories: false
+    sort-ui: true
+    filter-ui: false
+    fields:
+    - title
+    - image
+    - description 
+    - date
+
+  - id: recent-blog-listing
+    contents:
+    - "Blog/*.qmd"
+    - "!Blog/index.qmd"
+    sort: "date desc"
+    type: grid
+    max-items: 9
+    page-size: 3
+    categories: false
+    sort-ui: true
+    filter-ui: false
+    fields: [title, image, description, date]
 ---
 
 :::{#hero-heading}
@@ -27,21 +58,35 @@ about:
 
 My name is Lisa Lucky! I am 22 years old and currently in my final year at Dublin City University [(DCU)](https://www.dcu.ie/), pursuing a unique bachelor’s degree that combines my passions for business, language, and data analytics. My focus language is German, and I had the incredible opportunity to study abroad at the Technical University of Munich [(TUM)](https://www.tum.de/en/) during my third year, which further deepened my love for language and culture.
 
+With four years of experience in customer-facing roles and additional school experience with tools such as Excel, SQL, and Python, I am a strong candidate who is strategic and intentional in my work. 
 
+This site reflects of my journey, especially my growing passion for data analytics. To the left, you’ll find links to my **LinkedIn**, **GitHub**, and my **email address**. Feel free to explore my work, contact me and you can learn more about me by clicking [here](about.qmd)!
 
+```{=html}
+<div style="margin-top: 4.5rem;"></div> 
+```
 
+:::
 
+:::{.section .page-full}
 
+## Check out my latest [Projects](/projects1)!
 
+::: {#recent-projects1-listing}
+:::
 
+:::{.section .page-full}
 
+## Check out my latest [Blogs](/blog)!
 
-
-
-
-
+::: {#recent-blog-listing}
+:::
 
 
 <!-- Layout style (especially listing and hero-heading code) inspired and adapted from Damien Dupre's "About" Page and Garrick Aden-Buie https://www.garrickadenbuie.com/. Available through: https://damien-dupre.github.io/about.html and https://www.garrickadenbuie.com/ -->
 
 <!--Coding layout (including buttons etc) adapted from Sam Shanny-Csik https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide -->
+
+<!--Hero heading code also taken from here: https://quarto.org/docs/websites/website-about.html-->
+
+<!--Coding assistance from ChatGPT regarding spacing between hero-heading and div heading. Also utilsed to exclude content from listing (avoids showing index.qmd of projects1). Attempted to use "exclude:" but did not work, information regarding document listings was also used here: https://quarto.org/docs/websites/website-listings.html#overview-->
