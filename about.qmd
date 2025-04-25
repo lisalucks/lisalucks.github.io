@@ -11,7 +11,7 @@ toc: false
 
 I was born and raised in Ireland, with roots tracing back to Nigeria on both sides of my family. Growing up in a multilingual environment sparked my fascination with languages early on, which influenced the path I chose in terms of education. In secondary school, I gravitated towards business and French as my favourite subjects, one of which became a key area of focus in my academic journey.
 
-Building on this foundation, I wanted to take on a new challenge in university by choosing **German** as part of my degree in Business International. Four years later, I'm proud to have expanded my language skills and knowledge, and I'm now preparing for the next milestone, earning my C1 certification in German to indicate my proficiency. 
+Building on this foundation, I wanted to take on a new challenge in university by choosing **German** as part of my degree in Business International. Four years later, I'm proud to have expanded my language skills and knowledge, and I'm now preparing for the next milestone, earning my C1 certification in German to indicate my proficiency. To learn about my initial thoughts on Erasmus, please click [here](blog/first-ref.qmd)!
 
 During my university years, I did what I could to increase my knowledge of **data analytics** and **programming**. Whether that included completing extra Kubicle courses outside of the module's requirements or signing up for the Harvard Cs50x course, nothing would stop me! I want to apply what I've learned in multicultural contexts. I want to use what I've learned to help people and inspire them that it's possible to follow your ambitions, no matter how difficult it may seem.
 
@@ -21,8 +21,11 @@ During my university years, I did what I could to increase my knowledge of **dat
 
 During my degree, I became familiar with programs such as **Excel**, **Python**, and **Power BI**. I genuinely enjoy using them to derive strong insights that can help people. Click on each tool to access a project I have applied it to! The meter represents my proficiency in each program.
 
-[**Power BI: Consulting**]()  
-<div class="meter"><span style="width: 65%"></span></div>
+[**Power BI: Consulting**](projects1/powerbi.qmd)  
+<div class="meter"><span style="width: 70%"></span></div>
+
+[**Importance of customer recommendation: Python**](projects1/recommendation.qmd)  
+<div class="meter"><span style="width: 75%"></span></div>
 
 ---
 

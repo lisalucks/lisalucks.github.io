@@ -1,4 +1,39 @@
 /*-- scss:defaults --*/
+/*--Coding layout (including buttons etc) adapted from Sam Shanny-Csik https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide --*/
+
+//Colours 
+$purple: #f9ebff;
+$muave: #ae9cb5;
+$white1: #fcfcfc;
+$blue: #7979ba; 
+$blue1: #5656d6; 
+$black: #000000;
+
+
+//Base doc colours
+$navbar-bg: $muave;
+$body-bg: $purple;
+$navbar-fg: $black;
+$footer-bg: $muave;
+$footer-fg: #210040;
+
+/*-- scss:rules --*/
+
+.title {
+    color: #210040;
+}
+
+.navbar-brand img {
+    max-height: 60px;
+    width: auto;
+}
+
+.button-styling {
+    background: $black;
+    color: $black;
+    border-color: $black
+
+}
 
 .circular-image{
     width: 200px;
@@ -6,3 +41,24 @@
     border-radius: 50%;
     object-fit: cover;
 }
+
+  
+.meter {
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+.meter span {
+    display: block;
+    height: 100%;
+    background: #7979ba;
+    transition: width 0.5s;
+}
+
+
+
+
+
