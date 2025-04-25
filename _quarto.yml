@@ -1,6 +1,6 @@
 #_quarto.yml set-up was inspired by/adapted from Sam Shanny-Csik and available through this link: https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide 
-#Furthermore, organisation ideas such as assets inspired by Damien Dupre, accessible through here: https://damien-dupre.github.io/ 
-#For drop menu, code explained and given through quarto: https://quarto.org/docs/websites/website-navigation.html
+#Furthermore, organisation ideas such as assets folder inspired by Damien Dupre, accessible through here: https://damien-dupre.github.io/ 
+#For drop menu, code explained, it was given through quarto: https://quarto.org/docs/websites/website-navigation.html
 project:
   type: website
   output-dir: docs

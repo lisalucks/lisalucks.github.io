@@ -1,7 +1,25 @@
 ---
 title: "Lisa Lucky"
+subtitle: B.A. Business Studies International (German)
+image: assets/favicon1.png
+toc: false
+about:
+    id: hero-heading
+    template: trestles
+    image-shape: rounded
+    links: # create icons
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/lisa-lucky-157222358/
+      target: _blank
+    - icon: github
+      text: GitHub
+      href: https://github.com/lisalucks 
+      target: _blank
+    - icon: envelope-open
+      text: Email 
+      href: mailto:lisa.lucky2@mail.dcu.ie
+      target: _blank
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+# Welcome to my page!
