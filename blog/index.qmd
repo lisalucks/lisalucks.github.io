@@ -12,3 +12,5 @@ fields:
    - image 
    - description
 ---
+
+<!-- Displaying Projects in a Quarto Website. Lecture by Damien Dupre, available here: https://damien-dupre.github.io/BAA1028/lectures/lecture_9#/title-slide-->

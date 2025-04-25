@@ -83,7 +83,7 @@ This site reflects of my journey, especially my growing passion for data analyti
 :::
 
 
-<!-- Layout style (especially listing and hero-heading code) inspired and adapted from Damien Dupre's "About" Page and Garrick Aden-Buie https://www.garrickadenbuie.com/. Available through: https://damien-dupre.github.io/about.html and https://www.garrickadenbuie.com/ -->
+<!-- Layout style (especially listing and hero-heading code) inspired and adapted from Damien Dupre's "About" and "Courses" Page and Garrick Aden-Buie's Landing Page https://www.garrickadenbuie.com/. Available through: https://damien-dupre.github.io/about.html and https://www.garrickadenbuie.com/ -->
 
 <!--Coding layout (including buttons etc) adapted from Sam Shanny-Csik https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide -->
 

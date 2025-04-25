@@ -80,5 +80,6 @@ Below are a few links to blogs and articles which discuss more about data analyt
 </div>
 
 <!--Photo from Unsplash by: Stephen Dawson: https://unsplash.com/photos/turned-on-monitoring-screen-qwtCeJ5cLYs-->
-<!--ChatGPT assistance with div class coding-"Articles on Data & Tools"-->
+<!--ChatGPT assistance with div class coding for section, "Articles on Data & Tools"-->
+<!--Used font Awesome Extension for "Articles on Data & Tools" heading-->
 
