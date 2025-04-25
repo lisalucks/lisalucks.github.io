@@ -23,6 +23,8 @@ website:
             text: German Version
       - href: projects1/index.qmd
         text: Projects
+      - href: blog/index.qmd
+        text: Blog
 
 format:
   html:
