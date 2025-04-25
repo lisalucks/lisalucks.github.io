@@ -26,6 +26,15 @@ This project wasn’t just technical, as it tested my ability to **translate dat
 
 This dashboard was designed for an automobile company navigating Q3. Due to Power BI Desktop’s Windows-only limitation, the dashboard is shared below as a **PDF**, with a `.pbix` version available for download.
 
+```{html}
+<iframe src="pdf" width="75%" height="550px"></iframe>
+[Download the dashboard!](for-download/automobile-powerbi.pbix) 
+
+
+
+
+
+
 
 <!--Image for header from Unsplash by: Luke Chesser
 Available at: https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00-->
