@@ -13,6 +13,7 @@
       "/projects1/sqlmovie.html",
       "/projects1/recommendation.html",
       "/projects1/powerbi.html",
+      "/blog/first-ref.html",
       "/blog/specialism-thoughts.html",
       "/blog/specialism-choice.html"
     ]
@@ -21,7 +22,8 @@
     "listing": "/blog/index.html",
     "items": [
       "/blog/specialism-choice.html",
-      "/blog/specialism-thoughts.html"
+      "/blog/specialism-thoughts.html",
+      "/blog/first-ref.html"
     ]
   }
 ]
