@@ -39,7 +39,7 @@
     "href": "index.html#check-out-my-latest-blogs",
     "title": "Lisa Lucky",
     "section": "Check out my latest Blogs!",
-    "text": "Check out my latest Blogs!\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\nNo matching items"
+    "text": "Check out my latest Blogs!\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nWhy did I choose this specialism?\n\n\nOne of the key moments that sparked my passion for data analytics was a video featuring a day in the life of a data scientist. She discusses how she creates value within her…\n\n\n\nJan 14, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects1/sqlmovie.html",
@@ -165,6 +165,13 @@
     "href": "projects1/recommendation.html#overview-on-dataset",
     "title": "Disney Movie Recommendation System",
     "section": "Overview on dataset",
-    "text": "Overview on dataset\n\n\nCode\ndf = pd.read_csv('for-download/disney-titles.csv')\ndf.sample(5)\n\n\n\n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n981\ns982\nMovie\nJourney to the Center of the Earth\nHenry Levin\nPat Boone, James Mason, Arlene Dahl, Diane Bak...\nUnited States\nNovember 12, 2019\n1959\nG\n130 min\nAction-Adventure, Family, Science Fiction\nA professor and his colleague engage in a race...\n\n\n1201\ns1202\nMovie\nSnowglobe\nRon Lagomarsino\nChristina Milian, Erin Karpluk, Hilda Doherty,...\nUnited States\nNovember 12, 2019\n2007\nTV-PG\n90 min\nComedy, Family, Fantasy\nAngela finds a snow globe that transports her ...\n\n\n229\ns230\nMovie\nWild Hearts Can't Be Broken\nSteve Miner\nGabrielle Anwar, Michael Schoeffling, Kathleen...\nUnited States\nMay 7, 2021\n1991\nG\n89 min\nBiographical, Drama\nA runaway is determined to become a death-defy...\n\n\n326\ns327\nTV Show\nCosmos: Possible Worlds\nNaN\nNeil deGrasse Tyson\nUnited States\nDecember 25, 2020\n2020\nTV-14\n1 Season\nAction-Adventure, Docuseries, Family\nCOSMOS: POSSIBLE WORLDS continues Carl Sagan’s...\n\n\n1074\ns1075\nMovie\nMickey's Christmas Carol\nBurny Mattinson\nAlan Young, Wayne Allwine, Hal Smith, Will Rya...\nUnited States\nNovember 12, 2019\n1983\nG\n26 min\nAnimation, Comedy, Family\nAll your Disney pals star in this retelling of..."
+    "text": "Overview on dataset\n\n\nCode\ndf = pd.read_csv('for-download/disney-titles.csv')\ndf.sample(5)\n\n\n\n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n642\ns643\nMovie\nLoop\nErica Milsom\nMadison Bandy, Christiano Delgado, Louis Gonza...\nUnited States\nJanuary 10, 2020\n2020\nPG\n12 min\nAnimation, Family\nAdrift on a lake, two kids with different ways...\n\n\n1253\ns1254\nMovie\nThe Bears and I\nBernard McEveety\nPatrick Wayne, Chief George, Andrew Duggan, Mi...\nUnited States\nNovember 12, 2019\n1974\nTV-PG\n83 min\nAnimals & Nature, Drama, Family\nA man seeking peace and quiet becomes a father...\n\n\n941\ns942\nMovie\nHigh School Musical 2\nKenny Ortega\nZac Efron, Vanessa Hudgens, Ashley Tisdale, Lu...\nUnited States\nNovember 12, 2019\n2007\nTV-G\n114 min\nComing of Age, Musical\nThe East High Wildcats take on summer and let ...\n\n\n943\ns944\nTV Show\nHigh School Musical: The Musical: The Series\nNaN\nOlivia Rodrigo, Joshua Bassett, Matt Cornett, ...\nUnited States\nNovember 12, 2019\n2019\nTV-PG\n2 Seasons\nComedy, Coming of Age, Drama\nFor the first time ever, East High Wildcats pu...\n\n\n512\ns513\nMovie\nPercy Jackson & The Olympians: The Lightning T...\nChris Columbus\nLogan Lerman, Brandon T. Jackson, Alexandra Da...\nUnited Kingdom, Canada, United States\nJune 5, 2020\n2010\nPG\n119 min\nAction-Adventure, Family, Fantasy\nA boy discovers he's the descendant of Poseido..."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Welcome to my blog!",
+    "section": "",
+    "text": "Why did I choose this specialism?\n\n\n\nReflective Thinking\n\n\nPersonal Entry\n\n\n\nOne of the key moments that sparked my passion for data analytics was a video featuring a day in the life of a data scientist. She discusses how she creates value within her…\n\n\n\nLisa Lucky\n\n\nJan 14, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

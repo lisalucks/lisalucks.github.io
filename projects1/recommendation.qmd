@@ -107,3 +107,7 @@ print(recommend("Moana"))
 * [Pandas to.list() explanation](https://pandas.pydata.org/docs/reference/api/pandas.Series.to_list.html)
 
 * [The reset in Pandas](https://medium.com/@whyamit404/understanding-reset-index-in-pandas-2805c4f4bac4#:~:text=Resetting%20it%20gives%20you%20a,can%20create%20weird%20index%20sequences.)
+
+
+<!--Image for header from Unsplash by: Jayme McColgan
+Available at: https://unsplash.com/photos/crystal-castle-with-fireworks-at-night-IP1rSwr8R6o-->

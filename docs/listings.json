@@ -12,7 +12,14 @@
     "items": [
       "/projects1/sqlmovie.html",
       "/projects1/recommendation.html",
-      "/projects1/powerbi.html"
+      "/projects1/powerbi.html",
+      "/blog/specialism-choice.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/specialism-choice.html"
     ]
   }
 ]

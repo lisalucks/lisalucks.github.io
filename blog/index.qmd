@@ -1,3 +1,14 @@
 ---
-title: temporary title
+title: Welcome to my blog!
+subtitle: This blog acts as an organised thought space. I include entries ranging from my Erasmus experience to interesting articles I found. Have a look at the posts below!
+listing:
+   contents: 
+      /
+   sort: "date"
+   type: grid
+   categories: true
+fields: 
+   - title
+   - image 
+   - description
 ---
