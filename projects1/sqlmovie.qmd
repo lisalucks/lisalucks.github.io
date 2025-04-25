@@ -1,5 +1,5 @@
 ---
-title: Movie Analysis using SQL
+title: Industry Movie Analysis Using SQL
 description: I use SQL to derive insights from the movie industry to determine potential future directions. 
 image: project-photos/sql-project-photo.jpg
 date: 4/24/2025
@@ -11,15 +11,15 @@ categories: [SQL, Analysis]
 ---
 > Similar to what Netflix would have done in terms of a "data-driven" approach to create the successful show “House of Cards”, this SQL project follows the same idea [^1]. I will create a theoretical dataset which involves movie titles, directors, what they grossed, etc and query them to determine what specific component may have played a significant part in their success. 
 
-> Using the list from the Box Office Mojo [^2], I manually created tables with some headings. The code for this project is adapted from Medium's article [^3] regarding movies and databases.
+> Using the list from the Box Office Mojo [^2], I manually created tables with some headings. The code for this project is adapted from Medium's article [^3] using movies and their databases.
 
 ::: {.callout-tip}
 ## What was derived?
-* 2009 produced a batch of one of the most sucessful movies, including Avatar which ranked the highest in gross income; this also went on as a series. 
+* 2009 produced one of the most sucessful movies, including Avatar which ranked the highest in gross income; this also went on as a series. 
 
 * Most popular genre which grossed the highest was Sci-fi, showcasing the financial impact of a good science fiction storyline such as Avatar and Star Wars.
 
-* Popular directors such as James Cameron (Director of Avatar and Titanic) and Anthony and Joe Russo bring the largest revenue in regards to movies.
+* Popular directors such as James Cameron (Director of Avatar and Titanic) and Anthony and Joe Russo (Avengers) bring the largest revenue in regards to films.
 
 :::
 
@@ -193,18 +193,16 @@ WHERE m.movie_id = g.gross_id;
 
 ![SQL Results Table](sql-screenshots/sql1-src.png)
 
+## Seeing which movie ranked highest 
 ```{sql}
-/*Seeing which movie ranked highest*/
-
 SELECT title, gross
 FROM movies
 ORDER BY gross DESC
 LIMIT 1;
 ```
 
+## Seeing which director ranked highest
 ```{sql}
-/*Seeing which director ranked highest*/
-
 SELECT director_name, gross
 FROM movies
 ORDER BY gross DESC
@@ -212,9 +210,8 @@ Limit 5;
 ```
 ![Director's result](sql-screenshots/director_name.png)
 
+## Average gross across genre
 ```{sql}
-/*Average gross across genre*/
-
 SELECT genre, AVG(gross) AS avg_gross
 FROM movies
 GROUP BY genre 
@@ -222,9 +219,8 @@ ORDER BY avg_gross DESC;
 ```
 ![Genre Grossing](sql-screenshots/genre_gross.png)
 
+## Average income according to actors
 ```{sql}
-/*Average income according to actors*/
-
 SELECT main_lead, AVG(gross) AS avg_gross
 FROM movies
 GROUP BY main_lead 
@@ -233,9 +229,8 @@ LIMIT 5;
 ```
 ![Impact of main leads](sql-screenshots/Main_lead.png)
 
+## Average income according to year
 ```{sql}
-/*Average income according to year*/
-
 SELECT year_released, AVG(gross) AS avg_gross 
 FROM movies
 GROUP BY year_released 
@@ -257,7 +252,7 @@ LIMIT 3;
 
 [^3]: [Article which code is adapted from](https://medium.com/%40DylanAttal/learning-sql-making-a-movie-library-dba011182246)
 
-Sourcing for code from following websites as well as footnotes above.
+## Sourcing for code from following websites as well as footnotes below.
 
 
 * [SQL Averaging](https://hightouch.com/sql-dictionary/sql-avg)

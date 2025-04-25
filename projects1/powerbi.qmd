@@ -1,6 +1,6 @@
 ---
 title: "Power BI Insights"
-description: "This project showcases a data dashboard built in Power BI and presented as consultants. We analyzed a Kaggle dataset, delivered business insights, and reflected on the strategic direction of an automobile company."
+description: "This project showcases a data dashboard built in Power BI and is presented by us (as consultants). We analyzed a Kaggle dataset, delivered business insights, and reflected on the strategic direction of an automobile company."
 author: "Lisa Lucky, Jia Wen Cheng, Boon Chin Look, Laeeq Ur Rehman & Liam Cummins"
 date: "4/21/2025"
 image: "project-photos/power-bi-header.jpg"

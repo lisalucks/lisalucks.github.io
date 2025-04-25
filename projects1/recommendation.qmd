@@ -1,6 +1,6 @@
 ---
 title: "Disney Movie Recommendation System"
-description: "This Python project uses techniques such as Cosine Similarity and TF-IDF Vectorisation to choose similar Disney movies, based on descriptions."
+description: "This Python project uses techniques such as Cosine Similarity and TF-IDF Vectorisation to choose similar Disney movie titles, based on their descriptions."
 author: "Lisa Lucky"
 date: "4/24/2025"
 image: "project-photos/movie-rec-header1.jpg"
@@ -8,9 +8,9 @@ code-fold: true
 categories: [Python, Big Data]
 ---
 
-> This project is adapted off of Kevin Kibe's Medium article which details the usage of Cosine Similarity and TF-IDF Vectorisation for book recommendations [^1]. Using a Disney movies dataset from Kaggle [^2] which included titles, descriptions and directors, a defintions function from the medium article was adapted to allow for the return of five similar movies (based on the title input).
+> This project is adapted off of Kevin Kibe's Medium article which details the usage of Cosine Similarity and TF-IDF Vectorisation for book recommendations [^1]. Using a Disney movies dataset from Kaggle [^2] which included titles, descriptions and directors, a defintion function from the Medium article was adapted to allow for the return of five similar movie titles (based on their title input).
 
-> Under the same dataset, a large amount of Kaggle users had used Tensorflow and others, `TF-IDF vectorisors` (input "recommendation" in search bar for notebooks). Simplfying previous works and looking to the Medium article, I was able to build a recommender system for the Disney catalogue. Below details my process as well as explanations with the code. 
+> Under the same dataset, a large amount of Kaggle users had used Tensorflow and others, `TF-IDF vectorisors` (input "recommendation" in search bar for notebooks). Simplfying previous works and looking to the Medium article, I was able to build a recommendation system from the Disney catalogue. Below details my process as well as explanations with the code. 
 
 ## Importing libraries needed
 To begin, necessary libraries were imported. 
@@ -27,7 +27,7 @@ df = pd.read_csv('for-download/disney-titles.csv')
 df.sample(5)
 ```
 
-## Info of dataset
+## Info on dataset
 ```{python}
 df.info()
 ```
@@ -86,7 +86,7 @@ print(recommend("Moana"))
 
 * I learned how to use Cosine Similarity and TF-IDF Vectorisation. Similar to the idea of the [SQL](sqlmovie.qmd) project, I leveraged information about Disney movies to build a recommendation system.
 
-* System recommendations are essential in today's business world, where, through systems such as these, we can better understand customers and how to attract them [^3]. This proves my ability to chase after trends and understand the customer's mind. A significant component of Disney's success is its ability to recommend content properly to customers and ensure attention is always kept [^3]. My ability to recognise this allows me to apply what I have learned in school to add value to a company. 
+* System recommendations are essential in today's business world, where, through systems such as these, we can better understand customers and how to attract them [^3]. This proves my ability to chase after trends and understand the customer's mind. A significant component of Disney's success is its ability to recommend content properly to customers and ensure attention is always kept [^3]. My ability to recognise this allows me to apply what I have learned in university to add value to a company. 
 :::
 
 [^1]: [Code adapted from article](https://keviinkibe.medium.com/building-a-book-recommendation-system-with-cosine-similarity-and-tf-idf-vectorization-techniques-b0ad4cef0ce3#:~:text=One%20approach%20to%20building%20these,the%20importance%20of%20each%20word.)
