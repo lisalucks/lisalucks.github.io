@@ -1,6 +1,6 @@
 ---
 title: My Projects
-subtitle: This page details projects ranging from personal to academic. They demonstrate my ability to critically think and utilise skills and tools such as SQL and analytical thinking. Have a look below.
+subtitle: This page details projects ranging from personal to academic. They demonstrate my ability to think critically and utilise skills and tools for analytical thinking. Please have a look below.
 listing:
    contents: 
       /

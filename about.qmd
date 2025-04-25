@@ -11,7 +11,7 @@ toc: false
 
 I was born and raised in Ireland, with roots tracing back to Nigeria on both sides of my family. Growing up in a multilingual environment sparked my fascination with languages early on, which influenced the path I chose in terms of education. In secondary school, I gravitated towards business and French as my favourite subjects, one of which became a key area of focus in my academic journey.
 
-Building on this foundation, I wanted to take on a new challenge in university by choosing **German** as part of my degree in Business International. Four years later, I'm proud to have expanded my language skills and knowledge, and I'm now preparing for the next milestone, earning my C1 certification in German to indicate my proficiency. To learn about my initial thoughts on Erasmus, please click [here](blog/first-ref.qmd)!
+Building on this foundation, I wanted to take on a new challenge in university by choosing **German** as part of my degree in Business Studies International. Four years later, I'm proud to have expanded my language skills and knowledge, and I'm now preparing for the next milestone, earning my **C1** certification in German to indicate my proficiency. To learn more about my initial thoughts on Erasmus, please click [here](blog/first-ref.qmd)!
 
 During my university years, I did what I could to increase my knowledge of **data analytics** and **programming**. Whether that included completing extra Kubicle courses outside of the module's requirements or signing up for the Harvard Cs50x course, nothing would stop me! I want to apply what I've learned in multicultural contexts. I want to use what I've learned to help people and inspire them that it's possible to follow your ambitions, no matter how difficult it may seem.
 
@@ -19,13 +19,16 @@ During my university years, I did what I could to increase my knowledge of **dat
 
 ### My Skills {{< fa star >}}
 
-During my degree, I became familiar with programs such as **Excel**, **Python**, and **Power BI**. I genuinely enjoy using them to derive strong insights that can help people. Click on each tool to access a project I have applied it to! The meter represents my proficiency in each program.
+During my degree, I became familiar with programs such as **Excel**, **Python**, **Power BI** and more. I genuinely enjoy using them to capture strong insights that can help people and add any sort of value. Click on each tool to access a project I have applied it to! The meter represents my proficiency in each program.
 
-[**Power BI: Consulting**](projects1/powerbi.qmd)  
+[**Power BI: Consulting an Automobile Company**](projects1/powerbi.qmd)  
 <div class="meter"><span style="width: 70%"></span></div>
 
-[**Importance of customer recommendation: Python**](projects1/recommendation.qmd)  
+[**The Importance of Customer Recommendations: Python**](projects1/recommendation.qmd)  
 <div class="meter"><span style="width: 75%"></span></div>
+
+[**The Movie Industry and Sucess: SQL**](projects1/sqlmovie.qmd)  
+<div class="meter"><span style="width: 65%"></span></div>
 
 ---
 
@@ -35,7 +38,7 @@ To view my CV in English, click [here](english-cv.pdf).
 
 For the German version, click [here](german-cv.pdf)!
 
-If there is a preference to download them directly, **use the links below** to do so:
+If there is a preference to download them directly, **please use the links below** to do so:
 
 * <a href="english-cv.pdf" download> Download English Version</a>
 <p>
@@ -46,10 +49,10 @@ If there is a preference to download them directly, **use the links below** to d
 ---
 
 ### Hobbies & Interests {{< fa plane-departure >}}
-Outside of academia, I find ways to communicate in more languages! It may sound intense, but it is true! I love everything related to culture, travelling, and exploring. It's incredibly fun, and it is not just a way to learn about others but yourself, making you a more well-rounded person in my book. Hence, I chose this degree and studied in Munich during my third year! Although stressful and overwhelming at times, it was enriching. I love language learning and all the tribulations that may come with it! In four years, I have not only studied through **German** but am en route to getting my **C1** certificate soon! 
+Outside of academia, I find ways to communicate in more languages! It may sound intense, but it is true! I love everything related to culture, travelling and language learning. It's incredibly fun, and it is not just a way to learn about others but yourself, making you a more well-rounded person in my book. Hence, I chose this degree and studied in [Munich](https://www.tum.de/en/) during my third year! Although stressful and overwhelming at times, it was enriching. I love language learning and all the tribulations that may come with it! In four years, I have not only studied through **German** but am en route to getting my **C1 Goethe Institut** certificate soon! 
 
 
-Despite not choosing French with my degree, I still try to learn it when I have time! Language learning is one of my big interests, so I have made some effort to keep up with it! I will admit that a lot of my speaking ability is gone, but I can comprehend the context and do enjoy reading simple texts!
+Despite not choosing French with my degree, I still try to learn it when I have time! Language learning is one of my big interests, so I have made some effort to keep up with it! I will admit that a lot of my speaking ability is gone, but I can comprehend the context and do enjoy reading simple texts in the language!
 
 
 Furthermore, I enjoy music and dance! To keep fit, I practice choreography and have visited hip-hop dance classes in the past! 
@@ -60,17 +63,16 @@ Furthermore, I enjoy music and dance! To keep fit, I practice choreography and h
 
 * Senior Student of the Year [2021] - Ardscoil La Salle. 
 
-* Leaving Cert Points - 565 - all higher level subjects.
+* Leaving Cert Points: **565** (All higher level subjects).
 
-* Studied through German at the Technical University of Munich (Erasmus), now working towards a C1 certification.
+* **Studied through German** at the Technical University of Munich (Year long Erasmus), now working towards a C1 German certification.
 
-* Worked part-time in a customer-facing role in both English and German, expanding my ability to work in multicultural contexts.
+* Worked part-time in customer-facing roles in both English and German, expanding my **ability to work in multilingual contexts**.
 
-
-* Kubicle certificates include Excel PivotTables, Lookups, and database functions, as well as creating visualisations in Tableau.
+* Kubicle certificates include **Excel** PivotTables, Lookups, and database functions, as well as creating visualisations in **Tableau**.
 
 
 
 <!-- Circular image to scss idea, meter bar and download CV function - coding assistance with ChatGPT-->
 <!-- Layout style inspired by Damien Dupre's "About" Page. Available here: https://damien-dupre.github.io/about.html-->
-<!-- Font Awesome extension used-->
+<!-- Font Awesome extension used. Available here: https://fontawesome.com/search?q=work&o=r&s=solid&ip=classic-->
