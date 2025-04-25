@@ -1,6 +1,6 @@
 ---
 title: Thoughts After Completing the Data Analytics Specialism
-description: I talk reflectively about completing the data analytics specialism in DCU and how this will shape and impact my future career Below, I have also included some forms of media which inspired me, thus allowing me to stay diligent with my efforts and expanding on my technical abilities.
+description: I talk reflectively about completing the data analytics specialism in DCU and how this will shape and impact my future career.Below, I have also included some forms of media which inspired me, thus allowing me to stay diligent with my efforts and expanding on my technical abilities.
 date: "4/22/2025"
 image: photos-blog/thoughts-image.jpg
 toc: true
@@ -23,7 +23,7 @@ height= "400"></iframe>
 ```
 
 ### Building a website: code with me (Steph Ran)
-My site and other videos show that making something aesthetically pleasing is important to me. As I previously used the code editor "Spyder" in my first semester, I worried that switching to VS Code may have disadvantaged me. Especially when I heard others around me who had more experience with it. Now I have created my website (which you are currently on!), which shows how far I've come. This was a nice introductory video for me to get excited about website building, from seeing the VS Code in the video to seeing her thoughtfulness in the web design. I started to get better encouraged. Motivation is motivation, whilst the video is not too overly informative, it was an ice breaker! 
+My site and other videos show that making something aesthetically pleasing is important to me. As I previously used the code editor "Spyder" in my first semester, I worried that switching to VS Code may have disadvantaged me. Especially when I heard others around me who had more experience with it. Now I have created my website (which you are currently on), which shows how far I've come. This was a nice introductory video for me to get excited about website building, from seeing the VS Code in the video to seeing her thoughtfulness in the web design. I started to get better encouraged. Motivation is motivation, whilst the video is not too overly informative, it was an ice breaker! 
 
 ```{=html}
 <iframe src= "https://www.youtube.com/embed/ac-rvXHopbw?si=vxkLFwzpBUEimhkv" width="700"
@@ -32,7 +32,7 @@ height= "400"></iframe>
 
 ### The video I watched before the VS Code Lecture (Visual Studio Code)
 
-Eager to ensure I was not left behind and could follow the lecture, I watched this video to get started. Luckily, the slide content for the next class was available beforehand, so I did look over it too! Here, I finally understood how incredible Git is and made me connect the dots regarding how this would play into my assignment. 
+Eager to ensure I was not left behind and could follow the lecture, I watched this video to get started. Luckily, the slide content for the next class was available beforehand, so I did look over those slides too! Here, I finally understood how incredible Git was and made me connect the dots regarding how this would play into my assignment. 
 
 ```{=html}
 <iframe src= "https://www.youtube.com/embed/i_23KUAEtUM?si=Xzux6guQ004GZB2F" width="700"
@@ -40,7 +40,7 @@ height= "400"></iframe>
 ```
 
 ### SQL focus (Adam Finer)
-I watched this video after our initial SQL lecture to help with notetaking. Although we used Postgresql, it helped me understand the overall concept. 
+I watched this video after our initial SQL lecture in our first semester to help with notetaking. Although we used Postgresql, it helped me understand the overall concept. 
 
 ```{=html}
 <iframe src= "https://www.youtube.com/embed/kbKty5ZVKMY?si=5c7ZnhGcf27F_3gH" width="700"
@@ -48,7 +48,7 @@ height= "400"></iframe>
 ```
 
 # Articles on Data & Tools {{< fa list-check >}}
-
+Below are a few links to blogs and articles which discuss more about data analytics.
 ---
 <div class="article-grid">
 
