@@ -89,6 +89,6 @@ This site reflects of my journey, especially my growing passion for data analyti
 
 <!--Hero heading code also taken from here: https://quarto.org/docs/websites/website-about.html-->
 
-<!--Coding assistance from ChatGPT regarding spacing between hero-heading and div heading. Also utilsed to exclude content from listing (avoids showing index.qmd of projects1). Attempted to use "exclude:" but did not work, information regarding document listings was also used here: https://quarto.org/docs/websites/website-listings.html#overview-->
+<!--Coding assistance from ChatGPT regarding spacing between hero-heading, div heading and div spacing. Also utilsed to exclude content from listing (avoids showing index.qmd of projects1). Attempted to use "exclude:" but did not work, information regarding document listings was also used here: https://quarto.org/docs/websites/website-listings.html#overview-->
 
 <!--Photo by: Javier Miranda from Unsplash, available through: https://unsplash.com/photos/background-pattern-6NjUwCfRddM-->
