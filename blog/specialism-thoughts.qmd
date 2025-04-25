@@ -13,5 +13,13 @@ categories:
 
 > Fast-forward to the second semester, I am building a website (something I never imagined I could do) and have built machine learning algorithms to train a dataset. The specialism was incredibly useful and allowed me to test and become proficient in most fields required of me after graduation. I will be able to walk into the industry with experience, rather than arriving empty-handed, making me a promising candidate willing to progress further. 
 
+### Data Analytics and its importance (CareerFoundry)
+I have embedded a video below about data analytics and its importance in today's world. This excites me to join the industry and know that I will be making an impact no matter what. After Candidly Vivian's [day in the life of a data scientist](projectblog_1.qmd) video, this was the introductory video to ensure I fully knew what to expect. 
+
+```{=html}
+<iframe src= "https://www.youtube.com/embed/yZvFH7B6gKI?si=TikxMNK73egMPrFS" width="700"
+height= "400"></iframe>
+```
+
 
 
