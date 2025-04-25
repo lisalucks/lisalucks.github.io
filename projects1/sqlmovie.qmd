@@ -246,7 +246,7 @@ LIMIT 3;
 
 ::: {.callout-note collapse="true"}
 ### The conclusion / takeaway
-* Like Netflix’s strategy with House of Cards, production studios can combine proven elements — like visionary directors and high-performing genres — to consistently deliver top-grossing films.
+* Like Netflix’s strategy with House of Cards, production studios can combine proven elements, like visionary directors and high-performing genres, to consistently deliver top-grossing films.
 
 * This project isn't just about writing SQL; it reflects my ability to draw insight from data and communicate meaningful conclusions. That analytical mindset is something I’ll bring into every future role.
 :::

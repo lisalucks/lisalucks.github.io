@@ -10,7 +10,7 @@ categories: [Python, Big Data]
 
 > This project is adapted off of Kevin Kibe's Medium article which details the usage of Cosine Similarity and TF-IDF Vectorisation for book recommendations [^1]. Using a Disney movies dataset from Kaggle [^2] which included titles, descriptions and directors, a defintions function from the medium article was adapted to allow for the return of five similar movies (based on the title input).
 
-> Under the same dataset, a large amount of Kaggle users had used Tensorflow and others, tf-idf vectorisors (input "recommendation" in search bar for notebooks). Simplfying previous works and looking to the Medium article, I was able to build a recommender system for the Disney catalogue. Below details my process as well as explanations with the code. 
+> Under the same dataset, a large amount of Kaggle users had used Tensorflow and others, `TF-IDF vectorisors` (input "recommendation" in search bar for notebooks). Simplfying previous works and looking to the Medium article, I was able to build a recommender system for the Disney catalogue. Below details my process as well as explanations with the code. 
 
 ## Importing libraries needed
 To begin, necessary libraries were imported. 
