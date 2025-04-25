@@ -27,6 +27,13 @@ My site and other videos show that making something aesthetically pleasing is im
 ```{=html}
 <iframe src= "https://www.youtube.com/embed/ac-rvXHopbw?si=vxkLFwzpBUEimhkv" width="700"
 height= "400"></iframe>
+```
 
+### The video I watched before the VS Code Lecture (Visual Studio Code)
 
+Eager to ensure I was not left behind and could follow the lecture, I watched this video to get started. Luckily, the slide content for the next class was available beforehand, so I did look over it too! Here, I finally understood how incredible Git is and made me connect the dots regarding how this would play into my assignment. 
+
+```{=html}
+<iframe src= "https://www.youtube.com/embed/i_23KUAEtUM?si=Xzux6guQ004GZB2F" width="700"
+height= "400"></iframe>
 
