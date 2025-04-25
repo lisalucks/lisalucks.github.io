@@ -16,11 +16,11 @@ categories:
 
 * **Top Performing Product:** Classic cars led sales, specifically in the US market. We recommended expanding into **electric vehicles** for diversification [^2].
 
-* **Quality Control Issues:** Shipment sheet revealed that there are **long-term** waiting patterns on orders, could threaten customer trust. 
+* **Quality Control Issues:** Shipment sheet revealed that there are **long-term** waiting patterns on orders, could theoretically threaten customer trust. 
 
 ### What I learned
 
-This project wasn’t just technical, as it tested my ability to **translate data into decisions**. I didn’t just visualise trends — I helped craft **recommendations** based on real business logic. That makes me valuable in a business setting: not just what I know, but how I can **apply** it.
+This project wasn’t just technical, as it tested my ability to **translate data into decisions**. I didn’t just visualise trends, I helped craft **recommendations** based on real business logic. That makes me valuable in a business setting: not just what I know, but how I can **apply** it.
 
 ### The Power BI Dashboard
 
