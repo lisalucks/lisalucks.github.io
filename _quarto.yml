@@ -7,7 +7,7 @@ project:
 
 website:
   title: "Lisa Lucky"
-  favicon: assets/favicon1.png
+  favicon: assets/new-favicon.png
   navbar:
     title: false
     logo: assets/logo6.png
