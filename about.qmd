@@ -1,5 +1,10 @@
 ---
-title: "About"
+title: About
+about:
+   template: marquee
+toc: false
 ---
+
+## ![About me](assets/logo6.png){.circular-image}
 
 About this site
