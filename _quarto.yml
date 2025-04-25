@@ -42,6 +42,7 @@ website:
 
 format:
   html:
+    mainfont: Lora
     theme: styles.scss
     toc: true
     page-layout: full
