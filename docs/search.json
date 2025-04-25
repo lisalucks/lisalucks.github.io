@@ -54,5 +54,12 @@
     "title": "Movie Analysis using SQL",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nExplanation: Netflix’s House of Cards↩︎\nBox Office Mojo↩︎\nArticle which code is adapted from↩︎"
+  },
+  {
+    "objectID": "projects1/powerbi.html",
+    "href": "projects1/powerbi.html",
+    "title": "Power BI Insights",
+    "section": "",
+    "text": "Insights Derived\n\nSeasonal Trends: Sales peaked in Nov-Dec (2018-2019), alluding to seasonal buying behaviour [^1].\nTop Performing Product: Classic cars led sales, specifically in the US market. We recommended expanding into electric vehicles for diversification [^2].\nQuality Control Issues: Shipment sheet revealed that there are long-term waiting patterns on orders, could threaten customer trust."
   }
 ]

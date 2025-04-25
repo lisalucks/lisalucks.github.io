@@ -10,5 +10,13 @@ categories:
   - Power BI
 ---
 
+### Insights Derived 
+
+* **Seasonal Trends**: Sales peaked in **Nov-Dec** (2018-2019), alluding to seasonal buying behaviour [^1].
+
+* **Top Performing Product:** Classic cars led sales, specifically in the US market. We recommended expanding into **electric vehicles** for diversification [^2].
+
+* **Quality Control Issues:** Shipment sheet revealed that there are **long-term** waiting patterns on orders, could threaten customer trust. 
+
 <!--Image for header from Unsplash by: Luke Chesser
 Available at: https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00-->
