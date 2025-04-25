@@ -1,6 +1,7 @@
 ---
 title: Loop Reflect Portfolio (A comparison)
 description: In my third year, I got the chance to go on Erasmus. I attended one of Germany's most prestigious and well-known universities (Technical University of Munich). During this year, we were tasked to write reflections every so often to outline our cultural development. Below I have put my first reflection from that year. Within this post, I have also added a link to my final reflection for comparative purposes, to see how much I grew! 
+image: photos-blog/photo-park1.jpg
 author: "Lisa Lucky"
 date: 4/22/2025
 categories: 
