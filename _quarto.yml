@@ -21,6 +21,8 @@ website:
             text: English Version
           - href: german-cv.pdf
             text: German Version
+      - href: projects1/index.qmd
+        text: Projects
 
 format:
   html:
