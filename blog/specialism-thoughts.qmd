@@ -1,0 +1,10 @@
+---
+title: Thoughts After Completing the Data Analytics Specialism
+description: I talk reflectively about completing the data analytics specialism in DCU and how this will shape and impact my future career Below, I have also included some forms of media which inspired me, thus allowing me to stay diligent with my efforts and expanding on my technical abilities.
+date: "4/22/2025"
+toc: true
+author: Lisa Lucky, CareerFoundry, Visual Studio Code & Adam Finer
+categories:
+    - Reflective Thinking
+    - Personal Entry
+---
