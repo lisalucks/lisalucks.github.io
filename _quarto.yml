@@ -26,6 +26,15 @@ website:
       - href: blog/index.qmd
         text: Blog
 
+  page-footer:
+    left: Copyright 2025, Lisa Lucky
+    right: 
+    - icon: github
+      href: https://github.com/lisalucks
+    - icon: linkedin
+      href: https://www.linkedin.com/in/lisa-lucky-157222358/
+
+
 format:
   html:
     theme:
