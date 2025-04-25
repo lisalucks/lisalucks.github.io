@@ -7,9 +7,7 @@ author: Lisa Lucky
 code-fold: true
 code-tools: true
 toc: true
-categories:
-  - SQL
-  - Analysis
+categories: [SQL, Analysis]
 ---
 > Similar to what Netflix would have done in terms of a "data-driven" approach to create the successful show “House of Cards”, this SQL project follows the same idea [^1]. I will create a theoretical dataset which involves movie titles, directors, what they grossed, etc and query them to determine what specific component may have played a significant part in their success. 
 
