@@ -4,5 +4,106 @@ description: "This Python project uses techniques such as Cosine Similarity and 
 author: "Lisa Lucky"
 date: "4/24/2025"
 image: "project-photos/movie-rec-header1.jpg"
+code-fold: true
 categories: [Python, Big Data]
 ---
+
+> This project is adapted off of Kevin Kibe's Medium article which details the usage of Cosine Similarity and TF-IDF Vectorisation for book recommendations [^1]. Using a Disney movies dataset from Kaggle [^2] which included titles, descriptions and directors, a defintions function from the medium article was adapted to allow for the return of five similar movies (based on the title input).
+
+> Under the same dataset, a large amount of Kaggle users had used Tensorflow and others, tf-idf vectorisors (input "recommendation" in search bar for notebooks). Simplfying previous works and looking to the Medium article, I was able to build a recommender system for the Disney catalogue. Below details my process as well as explanations with the code. 
+
+## Importing libraries needed
+To begin, necessary libraries were imported. 
+```{python}
+import pandas as pd
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+```
+
+## Overview on dataset
+```{python}
+df = pd.read_csv('for-download/disney-titles.csv')
+df.sample(5)
+```
+
+## Info of dataset
+```{python}
+df.info()
+```
+
+## Null values in dataset, necessary for cleaning
+```{python}
+df.isnull().sum()
+```
+
+## All null values dropped, simplifying dataset
+```{python}
+df.dropna() #(Geeksforgeeks, 2025) dropping all rows with missing values to simplify, https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/
+```
+
+## Creating the TFID vector values
+```{python}
+vector = TfidfVectorizer(analyzer = "word", ngram_range=(1,2), min_df=0.0, stop_words='english')
+tfidf_matrix = vector.fit_transform(df['title'])
+
+the_matrix =  cosine_similarity(tfidf_matrix, tfidf_matrix)
+print(the_matrix)
+```
+
+## Allowing us to set the index back to default
+```{python}
+df = df.reset_index() 
+indices = pd.Series(df['description'])
+indices [:5]
+```
+
+## Recommendation function (Input = Moana)
+```{python}
+give_title = df['title'].tolist() # It should in other words, return a list of values from title because thus far we have only dealt with description (Pandas.pydata, n.d), https://pandas.pydata.org/docs/reference/api/pandas.Series.to_list.html 
+def recommend(title, cosine_sim = the_matrix):
+    if title not in give_title:
+        return "Unable to find title."
+
+    recommended_movies = []
+    # Search for title in title column to get the index
+    idx = df.index[df['title'] == title].tolist()[0]
+    score_series = pd.Series(cosine_sim[idx]).sort_values(ascending = False)
+    top_5_indices = list(score_series.iloc[1:6].index)
+
+    for i in top_5_indices:
+        recommended_movies.append(list(df['title'])[i]) # Recommend based on title
+
+    return recommended_movies
+
+print(recommend("Moana"))
+
+#Final block fixed and debugged using Google Colab AI assistant (Gemini).
+```
+---
+::: {.callout-tip}
+## Insights and Reflections
+
+* I learned how to use Cosine Similarity and TF-IDF Vectorisation. Similar to the idea of the [SQL](sqlmovie.qmd) project, I leveraged information about Disney movies to build a recommendation system.
+
+* System recommendations are essential in today's business world, where, through systems such as these, we can better understand customers and how to attract them [^3]. This proves my ability to chase after trends and understand the customer's mind. A significant component of Disney's success is its ability to recommend content properly to customers and ensure attention is always kept [^3]. My ability to recognise this allows me to apply what I have learned in school to add value to a company. 
+:::
+
+[^1]: [Code adapted from article](https://keviinkibe.medium.com/building-a-book-recommendation-system-with-cosine-similarity-and-tf-idf-vectorization-techniques-b0ad4cef0ce3#:~:text=One%20approach%20to%20building%20these,the%20importance%20of%20each%20word.)
+
+[^2]: [Link to Kaggle dataset](https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows/data)
+
+[^3]: [Disney+ and their recommendation system](https://medium.com/@donovanblake886/how-does-disney-handle-content-recommendations-and-personalization-2560000c77fb#:~:text=At%20the%20heart%20of%20Disney%2B's,day%2C%20to%20curate%20personalized%20recommendations.)
+
+
+## Link to other coding sources used in project
+
+* [TF-IDF and Cosine Similarity help](https://www.geeksforgeeks.org/movie-recommender-based-on-plot-summary-using-tf-idf-vectorization-and-cosine-similarity/)
+
+* [Dealing with missing data in Pandas](https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/)
+
+* [Use of code blocks in Quarto](https://quarto.org/docs/output-formats/html-code.html)
+
+* [Pandas to.list() explanation](https://pandas.pydata.org/docs/reference/api/pandas.Series.to_list.html)
+
+* [The reset in Pandas](https://medium.com/@whyamit404/understanding-reset-index-in-pandas-2805c4f4bac4#:~:text=Resetting%20it%20gives%20you%20a,can%20create%20weird%20index%20sequences.)

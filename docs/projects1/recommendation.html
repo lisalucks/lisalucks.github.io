@@ -23,10 +23,44 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -70,6 +104,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -133,11 +170,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#importing-libraries-needed" id="toc-importing-libraries-needed" class="nav-link active" data-scroll-target="#importing-libraries-needed">Importing libraries needed</a></li>
+  <li><a href="#overview-on-dataset" id="toc-overview-on-dataset" class="nav-link" data-scroll-target="#overview-on-dataset">Overview on dataset</a></li>
+  <li><a href="#info-of-dataset" id="toc-info-of-dataset" class="nav-link" data-scroll-target="#info-of-dataset">Info of dataset</a></li>
+  <li><a href="#null-values-in-dataset-necessary-for-cleaning" id="toc-null-values-in-dataset-necessary-for-cleaning" class="nav-link" data-scroll-target="#null-values-in-dataset-necessary-for-cleaning">Null values in dataset, necessary for cleaning</a></li>
+  <li><a href="#all-null-values-dropped-simplifying-dataset" id="toc-all-null-values-dropped-simplifying-dataset" class="nav-link" data-scroll-target="#all-null-values-dropped-simplifying-dataset">All null values dropped, simplifying dataset</a></li>
+  <li><a href="#creating-the-tfid-vector-values" id="toc-creating-the-tfid-vector-values" class="nav-link" data-scroll-target="#creating-the-tfid-vector-values">Creating the TFID vector values</a></li>
+  <li><a href="#allowing-us-to-set-the-index-back-to-default" id="toc-allowing-us-to-set-the-index-back-to-default" class="nav-link" data-scroll-target="#allowing-us-to-set-the-index-back-to-default">Allowing us to set the index back to default</a></li>
+  <li><a href="#recommendation-function-input-moana" id="toc-recommendation-function-input-moana" class="nav-link" data-scroll-target="#recommendation-function-input-moana">Recommendation function (Input = Moana)</a></li>
+  <li><a href="#link-to-other-coding-sources-used-in-project" id="toc-link-to-other-coding-sources-used-in-project" class="nav-link" data-scroll-target="#link-to-other-coding-sources-used-in-project">Link to other coding sources used in project</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -155,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -179,10 +230,506 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<blockquote class="blockquote">
+<p>This project is adapted off of Kevin Kibe’s Medium article which details the usage of Cosine Similarity and TF-IDF Vectorisation for book recommendations <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Using a Disney movies dataset from Kaggle <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> which included titles, descriptions and directors, a defintions function from the medium article was adapted to allow for the return of five similar movies (based on the title input).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Under the same dataset, a large amount of Kaggle users had used Tensorflow and others, tf-idf vectorisors (input “recommendation” in search bar for notebooks). Simplfying previous works and looking to the Medium article, I was able to build a recommender system for the Disney catalogue. Below details my process as well as explanations with the code.</p>
+</blockquote>
+<section id="importing-libraries-needed" class="level2">
+<h2 class="anchored" data-anchor-id="importing-libraries-needed">Importing libraries needed</h2>
+<p>To begin, necessary libraries were imported.</p>
+<div id="e60eb3b3" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> CountVectorizer, TfidfVectorizer</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics.pairwise <span class="im">import</span> cosine_similarity</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="overview-on-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="overview-on-dataset">Overview on dataset</h2>
+<div id="71833943" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'for-download/disney-titles.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.sample(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="224">
+<div>
 
 
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">show_id</th>
+<th data-quarto-table-cell-role="th">type</th>
+<th data-quarto-table-cell-role="th">title</th>
+<th data-quarto-table-cell-role="th">director</th>
+<th data-quarto-table-cell-role="th">cast</th>
+<th data-quarto-table-cell-role="th">country</th>
+<th data-quarto-table-cell-role="th">date_added</th>
+<th data-quarto-table-cell-role="th">release_year</th>
+<th data-quarto-table-cell-role="th">rating</th>
+<th data-quarto-table-cell-role="th">duration</th>
+<th data-quarto-table-cell-role="th">listed_in</th>
+<th data-quarto-table-cell-role="th">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">981</td>
+<td>s982</td>
+<td>Movie</td>
+<td>Journey to the Center of the Earth</td>
+<td>Henry Levin</td>
+<td>Pat Boone, James Mason, Arlene Dahl, Diane Bak...</td>
+<td>United States</td>
+<td>November 12, 2019</td>
+<td>1959</td>
+<td>G</td>
+<td>130 min</td>
+<td>Action-Adventure, Family, Science Fiction</td>
+<td>A professor and his colleague engage in a race...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1201</td>
+<td>s1202</td>
+<td>Movie</td>
+<td>Snowglobe</td>
+<td>Ron Lagomarsino</td>
+<td>Christina Milian, Erin Karpluk, Hilda Doherty,...</td>
+<td>United States</td>
+<td>November 12, 2019</td>
+<td>2007</td>
+<td>TV-PG</td>
+<td>90 min</td>
+<td>Comedy, Family, Fantasy</td>
+<td>Angela finds a snow globe that transports her ...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">229</td>
+<td>s230</td>
+<td>Movie</td>
+<td>Wild Hearts Can't Be Broken</td>
+<td>Steve Miner</td>
+<td>Gabrielle Anwar, Michael Schoeffling, Kathleen...</td>
+<td>United States</td>
+<td>May 7, 2021</td>
+<td>1991</td>
+<td>G</td>
+<td>89 min</td>
+<td>Biographical, Drama</td>
+<td>A runaway is determined to become a death-defy...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">326</td>
+<td>s327</td>
+<td>TV Show</td>
+<td>Cosmos: Possible Worlds</td>
+<td>NaN</td>
+<td>Neil deGrasse Tyson</td>
+<td>United States</td>
+<td>December 25, 2020</td>
+<td>2020</td>
+<td>TV-14</td>
+<td>1 Season</td>
+<td>Action-Adventure, Docuseries, Family</td>
+<td>COSMOS: POSSIBLE WORLDS continues Carl Sagan’s...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1074</td>
+<td>s1075</td>
+<td>Movie</td>
+<td>Mickey's Christmas Carol</td>
+<td>Burny Mattinson</td>
+<td>Alan Young, Wayne Allwine, Hal Smith, Will Rya...</td>
+<td>United States</td>
+<td>November 12, 2019</td>
+<td>1983</td>
+<td>G</td>
+<td>26 min</td>
+<td>Animation, Comedy, Family</td>
+<td>All your Disney pals star in this retelling of...</td>
+</tr>
+</tbody>
+</table>
 
-</main> <!-- /main -->
+</div>
+</div>
+</div>
+</section>
+<section id="info-of-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="info-of-dataset">Info of dataset</h2>
+<div id="da8a219b" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1450 entries, 0 to 1449
+Data columns (total 12 columns):
+ #   Column        Non-Null Count  Dtype 
+---  ------        --------------  ----- 
+ 0   show_id       1450 non-null   object
+ 1   type          1450 non-null   object
+ 2   title         1450 non-null   object
+ 3   director      977 non-null    object
+ 4   cast          1260 non-null   object
+ 5   country       1231 non-null   object
+ 6   date_added    1447 non-null   object
+ 7   release_year  1450 non-null   int64 
+ 8   rating        1447 non-null   object
+ 9   duration      1450 non-null   object
+ 10  listed_in     1450 non-null   object
+ 11  description   1450 non-null   object
+dtypes: int64(1), object(11)
+memory usage: 136.1+ KB</code></pre>
+</div>
+</div>
+</section>
+<section id="null-values-in-dataset-necessary-for-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="null-values-in-dataset-necessary-for-cleaning">Null values in dataset, necessary for cleaning</h2>
+<div id="cc3e3740" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="226">
+<pre><code>show_id           0
+type              0
+title             0
+director        473
+cast            190
+country         219
+date_added        3
+release_year      0
+rating            3
+duration          0
+listed_in         0
+description       0
+dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="all-null-values-dropped-simplifying-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="all-null-values-dropped-simplifying-dataset">All null values dropped, simplifying dataset</h2>
+<div id="c177de81" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df.dropna() <span class="co">#(Geeksforgeeks, 2025) dropping all rows with missing values to simplify, https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="227">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">show_id</th>
+<th data-quarto-table-cell-role="th">type</th>
+<th data-quarto-table-cell-role="th">title</th>
+<th data-quarto-table-cell-role="th">director</th>
+<th data-quarto-table-cell-role="th">cast</th>
+<th data-quarto-table-cell-role="th">country</th>
+<th data-quarto-table-cell-role="th">date_added</th>
+<th data-quarto-table-cell-role="th">release_year</th>
+<th data-quarto-table-cell-role="th">rating</th>
+<th data-quarto-table-cell-role="th">duration</th>
+<th data-quarto-table-cell-role="th">listed_in</th>
+<th data-quarto-table-cell-role="th">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>s3</td>
+<td>Movie</td>
+<td>Ice Age: A Mammoth Christmas</td>
+<td>Karen Disher</td>
+<td>Raymond Albert Romano, John Leguizamo, Denis L...</td>
+<td>United States</td>
+<td>November 26, 2021</td>
+<td>2011</td>
+<td>TV-G</td>
+<td>23 min</td>
+<td>Animation, Comedy, Family</td>
+<td>Sid the Sloth is on Santa's naughty list.</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>s6</td>
+<td>Movie</td>
+<td>Becoming Cousteau</td>
+<td>Liz Garbus</td>
+<td>Jacques Yves Cousteau, Vincent Cassel</td>
+<td>United States</td>
+<td>November 24, 2021</td>
+<td>2021</td>
+<td>PG-13</td>
+<td>94 min</td>
+<td>Biographical, Documentary</td>
+<td>An inside look at the legendary life of advent...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">9</td>
+<td>s10</td>
+<td>Movie</td>
+<td>A Muppets Christmas: Letters To Santa</td>
+<td>Kirk R. Thatcher</td>
+<td>Steve Whitmire, Dave Goelz, Bill Barretta, Eri...</td>
+<td>United States</td>
+<td>November 19, 2021</td>
+<td>2008</td>
+<td>G</td>
+<td>45 min</td>
+<td>Comedy, Family, Musical</td>
+<td>Celebrate the holiday season with all your fav...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">12</td>
+<td>s13</td>
+<td>Movie</td>
+<td>The Pixar Story</td>
+<td>Leslie Iwerks</td>
+<td>Stacy Keach, John Lasseter, Brad Bird, John Mu...</td>
+<td>United States</td>
+<td>November 19, 2021</td>
+<td>2007</td>
+<td>G</td>
+<td>91 min</td>
+<td>Documentary, Family</td>
+<td>A groundbreaking company forever changes the f...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">19</td>
+<td>s20</td>
+<td>Movie</td>
+<td>Enchanted</td>
+<td>Kevin Lima</td>
+<td>Amy Adams, Patrick Dempsey, James Marsden, Tim...</td>
+<td>United States</td>
+<td>November 12, 2021</td>
+<td>2007</td>
+<td>PG</td>
+<td>110 min</td>
+<td>Comedy, Family, Fantasy</td>
+<td>An animated princess winds up in the real worl...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1445</td>
+<td>s1446</td>
+<td>Movie</td>
+<td>X-Men Origins: Wolverine</td>
+<td>Gavin Hood</td>
+<td>Hugh Jackman, Liev Schreiber, Danny Huston, wi...</td>
+<td>United States, United Kingdom</td>
+<td>June 4, 2021</td>
+<td>2009</td>
+<td>PG-13</td>
+<td>108 min</td>
+<td>Action-Adventure, Family, Science Fiction</td>
+<td>Wolverine unites with legendary X-Men to fight...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1446</td>
+<td>s1447</td>
+<td>Movie</td>
+<td>Night at the Museum: Battle of the Smithsonian</td>
+<td>Shawn Levy</td>
+<td>Ben Stiller, Amy Adams, Owen Wilson, Hank Azar...</td>
+<td>United States, Canada</td>
+<td>April 2, 2021</td>
+<td>2009</td>
+<td>PG</td>
+<td>106 min</td>
+<td>Action-Adventure, Comedy, Family</td>
+<td>Larry Daley returns to rescue some old friends...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1447</td>
+<td>s1448</td>
+<td>Movie</td>
+<td>Eddie the Eagle</td>
+<td>Dexter Fletcher</td>
+<td>Tom Costello, Jo Hartley, Keith Allen, Dickon ...</td>
+<td>United Kingdom, Germany, United States</td>
+<td>December 18, 2020</td>
+<td>2016</td>
+<td>PG-13</td>
+<td>107 min</td>
+<td>Biographical, Comedy, Drama</td>
+<td>True story of Eddie Edwards, a British ski-jum...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1448</td>
+<td>s1449</td>
+<td>Movie</td>
+<td>Bend It Like Beckham</td>
+<td>Gurinder Chadha</td>
+<td>Parminder Nagra, Keira Knightley, Jonathan Rhy...</td>
+<td>United Kingdom, Germany, United States</td>
+<td>September 18, 2020</td>
+<td>2003</td>
+<td>PG-13</td>
+<td>112 min</td>
+<td>Buddy, Comedy, Coming of Age</td>
+<td>Despite the wishes of their traditional famili...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1449</td>
+<td>s1450</td>
+<td>Movie</td>
+<td>Captain Sparky vs. The Flying Saucers</td>
+<td>Mark Waring</td>
+<td>Charlie Tahan</td>
+<td>United States</td>
+<td>April 1, 2020</td>
+<td>2012</td>
+<td>TV-G</td>
+<td>2 min</td>
+<td>Action-Adventure, Animals &amp; Nature, Animation</td>
+<td>View one of Sparky's favorite home movies.</td>
+</tr>
+</tbody>
+</table>
+
+<p>818 rows × 12 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-the-tfid-vector-values" class="level2">
+<h2 class="anchored" data-anchor-id="creating-the-tfid-vector-values">Creating the TFID vector values</h2>
+<div id="58a907e7" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> TfidfVectorizer(analyzer <span class="op">=</span> <span class="st">"word"</span>, ngram_range<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">2</span>), min_df<span class="op">=</span><span class="fl">0.0</span>, stop_words<span class="op">=</span><span class="st">'english'</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>tfidf_matrix <span class="op">=</span> vector.fit_transform(df[<span class="st">'title'</span>])</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>the_matrix <span class="op">=</span>  cosine_similarity(tfidf_matrix, tfidf_matrix)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(the_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1.         0.07856161 0.07072431 ... 0.         0.         0.        ]
+ [0.07856161 1.         0.09737137 ... 0.         0.         0.        ]
+ [0.07072431 0.09737137 1.         ... 0.         0.         0.        ]
+ ...
+ [0.         0.         0.         ... 1.         0.         0.        ]
+ [0.         0.         0.         ... 0.         1.         0.        ]
+ [0.         0.         0.         ... 0.         0.         1.        ]]</code></pre>
+</div>
+</div>
+</section>
+<section id="allowing-us-to-set-the-index-back-to-default" class="level2">
+<h2 class="anchored" data-anchor-id="allowing-us-to-set-the-index-back-to-default">Allowing us to set the index back to default</h2>
+<div id="c15ee33a" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.reset_index() </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>indices <span class="op">=</span> pd.Series(df[<span class="st">'description'</span>])</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>indices [:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="229">
+<pre><code>0     Join Mickey and the gang as they duck the halls!
+1    Santa Claus passes his magic bag to a new St. ...
+2            Sid the Sloth is on Santa's naughty list.
+3                 This is real life, not just fantasy!
+4    A three-part documentary from Peter Jackson ca...
+Name: description, dtype: object</code></pre>
+</div>
+</div>
+</section>
+<section id="recommendation-function-input-moana" class="level2">
+<h2 class="anchored" data-anchor-id="recommendation-function-input-moana">Recommendation function (Input = Moana)</h2>
+<div id="663a9795" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>give_title <span class="op">=</span> df[<span class="st">'title'</span>].tolist() <span class="co"># It should in other words, return a list of values from title because thus far we have only dealt with description (Pandas.pydata, n.d), https://pandas.pydata.org/docs/reference/api/pandas.Series.to_list.html </span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recommend(title, cosine_sim <span class="op">=</span> the_matrix):</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> title <span class="kw">not</span> <span class="kw">in</span> give_title:</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Unable to find title."</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    recommended_movies <span class="op">=</span> []</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Search for title in title column to get the index</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> df.index[df[<span class="st">'title'</span>] <span class="op">==</span> title].tolist()[<span class="dv">0</span>]</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    score_series <span class="op">=</span> pd.Series(cosine_sim[idx]).sort_values(ascending <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    top_5_indices <span class="op">=</span> <span class="bu">list</span>(score_series.iloc[<span class="dv">1</span>:<span class="dv">6</span>].index)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> top_5_indices:</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>        recommended_movies.append(<span class="bu">list</span>(df[<span class="st">'title'</span>])[i]) <span class="co"># Recommend based on title</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> recommended_movies</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(recommend(<span class="st">"Moana"</span>))</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Final block fixed and debugged using Google Colab AI assistant (Gemini).</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>['James and the Giant Peach', 'Jack', 'Iron Will', 'Iron Man Armored Adventures', 'Iron Man (Series)']</code></pre>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Insights and Reflections
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>I learned how to use Cosine Similarity and TF-IDF Vectorisation. Similar to the idea of the <a href="../projects1/sqlmovie.html">SQL</a> project, I leveraged information about Disney movies to build a recommendation system.</p></li>
+<li><p>System recommendations are essential in today’s business world, where, through systems such as these, we can better understand customers and how to attract them <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. This proves my ability to chase after trends and understand the customer’s mind. A significant component of Disney’s success is its ability to recommend content properly to customers and ensure attention is always kept <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. My ability to recognise this allows me to apply what I have learned in school to add value to a company.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="link-to-other-coding-sources-used-in-project" class="level2">
+<h2 class="anchored" data-anchor-id="link-to-other-coding-sources-used-in-project">Link to other coding sources used in project</h2>
+<ul>
+<li><p><a href="https://www.geeksforgeeks.org/movie-recommender-based-on-plot-summary-using-tf-idf-vectorization-and-cosine-similarity/">TF-IDF and Cosine Similarity help</a></p></li>
+<li><p><a href="https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/">Dealing with missing data in Pandas</a></p></li>
+<li><p><a href="https://quarto.org/docs/output-formats/html-code.html">Use of code blocks in Quarto</a></p></li>
+<li><p><a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.to_list.html">Pandas to.list() explanation</a></p></li>
+<li><p><a href="https://medium.com/@whyamit404/understanding-reset-index-in-pandas-2805c4f4bac4#:~:text=Resetting%20it%20gives%20you%20a,can%20create%20weird%20index%20sequences.">The reset in Pandas</a></p></li>
+</ul>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://keviinkibe.medium.com/building-a-book-recommendation-system-with-cosine-similarity-and-tf-idf-vectorization-techniques-b0ad4cef0ce3#:~:text=One%20approach%20to%20building%20these,the%20importance%20of%20each%20word.">Code adapted from article</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows/data">Link to Kaggle dataset</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://medium.com/@donovanblake886/how-does-disney-handle-content-recommendations-and-personalization-2560000c77fb#:~:text=At%20the%20heart%20of%20Disney%2B's,day%2C%20to%20curate%20personalized%20recommendations.">Disney+ and their recommendation system</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><a href="https://medium.com/@donovanblake886/how-does-disney-handle-content-recommendations-and-personalization-2560000c77fb#:~:text=At%20the%20heart%20of%20Disney%2B's,day%2C%20to%20curate%20personalized%20recommendations.">Disney+ and their recommendation system</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -68,5 +68,103 @@
     "title": "Power BI Insights",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nSpeaks about cars and its connection to seasonal buying behaviours↩︎\nElectric vehicles in the market↩︎"
+  },
+  {
+    "objectID": "projects1/recommendation.html",
+    "href": "projects1/recommendation.html",
+    "title": "Disney Movie Recommendation System",
+    "section": "",
+    "text": "This project is adapted off of Kevin Kibe’s Medium article which details the usage of Cosine Similarity and TF-IDF Vectorisation for book recommendations 1. Using a Disney movies dataset from Kaggle 2 which included titles, descriptions and directors, a defintions function from the medium article was adapted to allow for the return of five similar movies (based on the title input)."
+  },
+  {
+    "objectID": "projects1/recommendation.html#importing-libraries-needed",
+    "href": "projects1/recommendation.html#importing-libraries-needed",
+    "title": "Disney Movie Recommendation System",
+    "section": "Importing libraries needed",
+    "text": "Importing libraries needed\nTo begin, necessary libraries were imported.\n\n\nCode\nimport pandas as pd\nimport numpy as np\nfrom sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer\nfrom sklearn.metrics.pairwise import cosine_similarity"
+  },
+  {
+    "objectID": "projects1/recommendation.html#overview-of-table",
+    "href": "projects1/recommendation.html#overview-of-table",
+    "title": "Disney Movie Recommendation System",
+    "section": "Overview of table",
+    "text": "Overview of table\n\n\nCode\ndf = pd.read_csv('for-download/disney-titles.csv')\ndf.head()\n\n\n\n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n0\ns1\nMovie\nDuck the Halls: A Mickey Mouse Christmas Special\nAlonso Ramirez Ramos, Dave Wasson\nChris Diamantopoulos, Tony Anselmo, Tress MacN...\nNaN\nNovember 26, 2021\n2016\nTV-G\n23 min\nAnimation, Family\nJoin Mickey and the gang as they duck the halls!\n\n\n1\ns2\nMovie\nErnest Saves Christmas\nJohn Cherry\nJim Varney, Noelle Parker, Douglas Seale\nNaN\nNovember 26, 2021\n1988\nPG\n91 min\nComedy\nSanta Claus passes his magic bag to a new St. ...\n\n\n2\ns3\nMovie\nIce Age: A Mammoth Christmas\nKaren Disher\nRaymond Albert Romano, John Leguizamo, Denis L...\nUnited States\nNovember 26, 2021\n2011\nTV-G\n23 min\nAnimation, Comedy, Family\nSid the Sloth is on Santa's naughty list.\n\n\n3\ns4\nMovie\nThe Queen Family Singalong\nHamish Hamilton\nDarren Criss, Adam Lambert, Derek Hough, Alexa...\nNaN\nNovember 26, 2021\n2021\nTV-PG\n41 min\nMusical\nThis is real life, not just fantasy!\n\n\n4\ns5\nTV Show\nThe Beatles: Get Back\nNaN\nJohn Lennon, Paul McCartney, George Harrison, ...\nNaN\nNovember 25, 2021\n2021\nNaN\n1 Season\nDocuseries, Historical, Music\nA three-part documentary from Peter Jackson ca..."
+  },
+  {
+    "objectID": "projects1/recommendation.html#overview-of-dataset",
+    "href": "projects1/recommendation.html#overview-of-dataset",
+    "title": "Disney Movie Recommendation System",
+    "section": "Overview of dataset",
+    "text": "Overview of dataset\n\n\nCode\ndf = pd.read_csv('for-download/disney-titles.csv')\ndf.sample(5)\n\n\n\n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n1043\ns1044\nMovie\nMarvel Studios' Captain Marvel\nAnna Boden, Ryan Fleck\nBrie Larson, Samuel Jackson, Ben Mendelsohn, D...\nUnited States, Australia\nNovember 12, 2019\n2019\nPG-13\n126 min\nAction-Adventure, Science Fiction, Superhero\nMarvel Studios’ Captain Marvel launches the MC...\n\n\n256\ns257\nMovie\nSquanto: A Warrior's Tale\nXavier Koller\nAdam Beach, Eric Schweig, Michael Gambon, Nath...\nUnited States, Canada\nApril 9, 2021\n1994\nPG\n102 min\nAction-Adventure, Biographical, Drama\nA vivid true story of one man's unquenchable t...\n\n\n1208\ns1209\nTV Show\nStar Wars Forces of Destiny (Shorts)\nNaN\nAshley Eckstein, Matt Lanter, C1-10P a.k.a. \"C...\nUnited States\nNovember 12, 2019\n2016\nTV-Y7\n2 Seasons\nAction-Adventure, Animation, Anthology\nUntold stories from the heroines of Star Wars.\n\n\n479\ns480\nTV Show\nAnimal ER\nNaN\nDr. Brian Beale\nUnited States\nJuly 3, 2020\n2016\nTV-PG\n2 Seasons\nAnimals & Nature, Docuseries, Family\nAnimal ER brings you up close to the bleeding ...\n\n\n724\ns725\nMovie\nAlmost Angels\nSteve Previn\nVincent Winter, Sean Scully, Peter Weck, Hans ...\nUnited States\nNovember 12, 2019\n1962\nTV-PG\n90 min\nComing of Age, Drama, Family\nA working-class youth tries to fit in when wit..."
+  },
+  {
+    "objectID": "projects1/recommendation.html#info-of-dataset",
+    "href": "projects1/recommendation.html#info-of-dataset",
+    "title": "Disney Movie Recommendation System",
+    "section": "Info of dataset",
+    "text": "Info of dataset\n\n\nCode\ndf.info()\n\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 1450 entries, 0 to 1449\nData columns (total 12 columns):\n #   Column        Non-Null Count  Dtype \n---  ------        --------------  ----- \n 0   show_id       1450 non-null   object\n 1   type          1450 non-null   object\n 2   title         1450 non-null   object\n 3   director      977 non-null    object\n 4   cast          1260 non-null   object\n 5   country       1231 non-null   object\n 6   date_added    1447 non-null   object\n 7   release_year  1450 non-null   int64 \n 8   rating        1447 non-null   object\n 9   duration      1450 non-null   object\n 10  listed_in     1450 non-null   object\n 11  description   1450 non-null   object\ndtypes: int64(1), object(11)\nmemory usage: 136.1+ KB"
+  },
+  {
+    "objectID": "projects1/recommendation.html#null-values-in-dataset-necessary-for-cleaning",
+    "href": "projects1/recommendation.html#null-values-in-dataset-necessary-for-cleaning",
+    "title": "Disney Movie Recommendation System",
+    "section": "Null values in dataset, necessary for cleaning",
+    "text": "Null values in dataset, necessary for cleaning\n\n\nCode\ndf.isnull().sum()\n\n\nshow_id           0\ntype              0\ntitle             0\ndirector        473\ncast            190\ncountry         219\ndate_added        3\nrelease_year      0\nrating            3\nduration          0\nlisted_in         0\ndescription       0\ndtype: int64"
+  },
+  {
+    "objectID": "projects1/recommendation.html#all-null-values-dropped-simplifying-dataset",
+    "href": "projects1/recommendation.html#all-null-values-dropped-simplifying-dataset",
+    "title": "Disney Movie Recommendation System",
+    "section": "All null values dropped, simplifying dataset",
+    "text": "All null values dropped, simplifying dataset\n\n\nCode\ndf.dropna() #(Geeksforgeeks, 2025) dropping all rows with missing values to simplify, https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/\n\n\n\n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n2\ns3\nMovie\nIce Age: A Mammoth Christmas\nKaren Disher\nRaymond Albert Romano, John Leguizamo, Denis L...\nUnited States\nNovember 26, 2021\n2011\nTV-G\n23 min\nAnimation, Comedy, Family\nSid the Sloth is on Santa's naughty list.\n\n\n5\ns6\nMovie\nBecoming Cousteau\nLiz Garbus\nJacques Yves Cousteau, Vincent Cassel\nUnited States\nNovember 24, 2021\n2021\nPG-13\n94 min\nBiographical, Documentary\nAn inside look at the legendary life of advent...\n\n\n9\ns10\nMovie\nA Muppets Christmas: Letters To Santa\nKirk R. Thatcher\nSteve Whitmire, Dave Goelz, Bill Barretta, Eri...\nUnited States\nNovember 19, 2021\n2008\nG\n45 min\nComedy, Family, Musical\nCelebrate the holiday season with all your fav...\n\n\n12\ns13\nMovie\nThe Pixar Story\nLeslie Iwerks\nStacy Keach, John Lasseter, Brad Bird, John Mu...\nUnited States\nNovember 19, 2021\n2007\nG\n91 min\nDocumentary, Family\nA groundbreaking company forever changes the f...\n\n\n19\ns20\nMovie\nEnchanted\nKevin Lima\nAmy Adams, Patrick Dempsey, James Marsden, Tim...\nUnited States\nNovember 12, 2021\n2007\nPG\n110 min\nComedy, Family, Fantasy\nAn animated princess winds up in the real worl...\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n1445\ns1446\nMovie\nX-Men Origins: Wolverine\nGavin Hood\nHugh Jackman, Liev Schreiber, Danny Huston, wi...\nUnited States, United Kingdom\nJune 4, 2021\n2009\nPG-13\n108 min\nAction-Adventure, Family, Science Fiction\nWolverine unites with legendary X-Men to fight...\n\n\n1446\ns1447\nMovie\nNight at the Museum: Battle of the Smithsonian\nShawn Levy\nBen Stiller, Amy Adams, Owen Wilson, Hank Azar...\nUnited States, Canada\nApril 2, 2021\n2009\nPG\n106 min\nAction-Adventure, Comedy, Family\nLarry Daley returns to rescue some old friends...\n\n\n1447\ns1448\nMovie\nEddie the Eagle\nDexter Fletcher\nTom Costello, Jo Hartley, Keith Allen, Dickon ...\nUnited Kingdom, Germany, United States\nDecember 18, 2020\n2016\nPG-13\n107 min\nBiographical, Comedy, Drama\nTrue story of Eddie Edwards, a British ski-jum...\n\n\n1448\ns1449\nMovie\nBend It Like Beckham\nGurinder Chadha\nParminder Nagra, Keira Knightley, Jonathan Rhy...\nUnited Kingdom, Germany, United States\nSeptember 18, 2020\n2003\nPG-13\n112 min\nBuddy, Comedy, Coming of Age\nDespite the wishes of their traditional famili...\n\n\n1449\ns1450\nMovie\nCaptain Sparky vs. The Flying Saucers\nMark Waring\nCharlie Tahan\nUnited States\nApril 1, 2020\n2012\nTV-G\n2 min\nAction-Adventure, Animals & Nature, Animation\nView one of Sparky's favorite home movies.\n\n\n\n\n818 rows × 12 columns"
+  },
+  {
+    "objectID": "projects1/recommendation.html#allowing-us-to-set-the-index-back-to-default",
+    "href": "projects1/recommendation.html#allowing-us-to-set-the-index-back-to-default",
+    "title": "Disney Movie Recommendation System",
+    "section": "Allowing us to set the index back to default",
+    "text": "Allowing us to set the index back to default\n\n\nCode\ndf = df.reset_index() \nindices = pd.Series(df['description'])\nindices [:5]\n\n\n0     Join Mickey and the gang as they duck the halls!\n1    Santa Claus passes his magic bag to a new St. ...\n2            Sid the Sloth is on Santa's naughty list.\n3                 This is real life, not just fantasy!\n4    A three-part documentary from Peter Jackson ca...\nName: description, dtype: object"
+  },
+  {
+    "objectID": "projects1/recommendation.html#recommendation-function",
+    "href": "projects1/recommendation.html#recommendation-function",
+    "title": "Disney Movie Recommendation System",
+    "section": "Recommendation function",
+    "text": "Recommendation function\n\n\nCode\ngive_title = df['title'].tolist() # It should in other words, return a list of values from title because thus far we have only dealt with description (Pandas.pydata, n.d), https://pandas.pydata.org/docs/reference/api/pandas.Series.to_list.html \ndef recommend(title, cosine_sim = the_matrix):\n    if title not in give_title:\n        return \"Unable to find title.\"\n\n    recommended_movies = []\n    # Search for title in title column to get the index\n    idx = df.index[df['title'] == title].tolist()[0]\n    score_series = pd.Series(cosine_sim[idx]).sort_values(ascending = False)\n    top_5_indices = list(score_series.iloc[1:6].index)\n\n    for i in top_5_indices:\n        recommended_movies.append(list(df['title'])[i]) # Recommend based on title\n\n    return recommended_movies\n\nprint(recommend(\"Moana\"))\n\n#Final block fixed and debugged using Google Colab AI assistant (Gemini).\n\n\n['James and the Giant Peach', 'Jack', 'Iron Will', 'Iron Man Armored Adventures', 'Iron Man (Series)']"
+  },
+  {
+    "objectID": "projects1/recommendation.html#recommendation-function-input-moana",
+    "href": "projects1/recommendation.html#recommendation-function-input-moana",
+    "title": "Disney Movie Recommendation System",
+    "section": "Recommendation function (Input = Moana)",
+    "text": "Recommendation function (Input = Moana)\n\n\nCode\ngive_title = df['title'].tolist() # It should in other words, return a list of values from title because thus far we have only dealt with description (Pandas.pydata, n.d), https://pandas.pydata.org/docs/reference/api/pandas.Series.to_list.html \ndef recommend(title, cosine_sim = the_matrix):\n    if title not in give_title:\n        return \"Unable to find title.\"\n\n    recommended_movies = []\n    # Search for title in title column to get the index\n    idx = df.index[df['title'] == title].tolist()[0]\n    score_series = pd.Series(cosine_sim[idx]).sort_values(ascending = False)\n    top_5_indices = list(score_series.iloc[1:6].index)\n\n    for i in top_5_indices:\n        recommended_movies.append(list(df['title'])[i]) # Recommend based on title\n\n    return recommended_movies\n\nprint(recommend(\"Moana\"))\n\n#Final block fixed and debugged using Google Colab AI assistant (Gemini).\n\n\n['James and the Giant Peach', 'Jack', 'Iron Will', 'Iron Man Armored Adventures', 'Iron Man (Series)']\n\n\n\n\n\n\n\n\n\nInsights and Reflections\n\n\n\n\nI learned how to use Cosine Similarity and TF-IDF Vectorisation. Similar to the idea of the SQL project, I leveraged information about Disney movies to build a recommendation system.\nSystem recommendations are essential in today’s business world, where, through systems such as these, we can better understand customers and how to attract them 3. This proves my ability to chase after trends and understand the customer’s mind. A significant component of Disney’s success is its ability to recommend content properly to customers and ensure attention is always kept 4. My ability to recognise this allows me to apply what I have learned in school to add value to a company."
+  },
+  {
+    "objectID": "projects1/recommendation.html#footnotes",
+    "href": "projects1/recommendation.html#footnotes",
+    "title": "Disney Movie Recommendation System",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nCode adapted from article↩︎\nLink to Kaggle dataset↩︎\nDisney+ and their recommendation system↩︎\nDisney+ and their recommendation system↩︎"
+  },
+  {
+    "objectID": "projects1/recommendation.html#link-to-other-coding-sources-used-in-project",
+    "href": "projects1/recommendation.html#link-to-other-coding-sources-used-in-project",
+    "title": "Disney Movie Recommendation System",
+    "section": "Link to other coding sources used in project",
+    "text": "Link to other coding sources used in project\n\nTF-IDF and Cosine Similarity help\nDealing with missing data in Pandas\nUse of code blocks in Quarto\nPandas to.list() explanation\nThe reset in Pandas"
+  },
+  {
+    "objectID": "projects1/recommendation.html#creating-the-tfid-vector-values",
+    "href": "projects1/recommendation.html#creating-the-tfid-vector-values",
+    "title": "Disney Movie Recommendation System",
+    "section": "Creating the TFID vector values",
+    "text": "Creating the TFID vector values\n\n\nCode\nvector = TfidfVectorizer(analyzer = \"word\", ngram_range=(1,2), min_df=0.0, stop_words='english')\ntfidf_matrix = vector.fit_transform(df['title'])\n\nthe_matrix =  cosine_similarity(tfidf_matrix, tfidf_matrix)\nprint(the_matrix)\n\n\n[[1.         0.07856161 0.07072431 ... 0.         0.         0.        ]\n [0.07856161 1.         0.09737137 ... 0.         0.         0.        ]\n [0.07072431 0.09737137 1.         ... 0.         0.         0.        ]\n ...\n [0.         0.         0.         ... 1.         0.         0.        ]\n [0.         0.         0.         ... 0.         1.         0.        ]\n [0.         0.         0.         ... 0.         0.         1.        ]]"
+  },
+  {
+    "objectID": "projects1/recommendation.html#overview-on-dataset",
+    "href": "projects1/recommendation.html#overview-on-dataset",
+    "title": "Disney Movie Recommendation System",
+    "section": "Overview on dataset",
+    "text": "Overview on dataset\n\n\nCode\ndf = pd.read_csv('for-download/disney-titles.csv')\ndf.sample(5)\n\n\n\n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n981\ns982\nMovie\nJourney to the Center of the Earth\nHenry Levin\nPat Boone, James Mason, Arlene Dahl, Diane Bak...\nUnited States\nNovember 12, 2019\n1959\nG\n130 min\nAction-Adventure, Family, Science Fiction\nA professor and his colleague engage in a race...\n\n\n1201\ns1202\nMovie\nSnowglobe\nRon Lagomarsino\nChristina Milian, Erin Karpluk, Hilda Doherty,...\nUnited States\nNovember 12, 2019\n2007\nTV-PG\n90 min\nComedy, Family, Fantasy\nAngela finds a snow globe that transports her ...\n\n\n229\ns230\nMovie\nWild Hearts Can't Be Broken\nSteve Miner\nGabrielle Anwar, Michael Schoeffling, Kathleen...\nUnited States\nMay 7, 2021\n1991\nG\n89 min\nBiographical, Drama\nA runaway is determined to become a death-defy...\n\n\n326\ns327\nTV Show\nCosmos: Possible Worlds\nNaN\nNeil deGrasse Tyson\nUnited States\nDecember 25, 2020\n2020\nTV-14\n1 Season\nAction-Adventure, Docuseries, Family\nCOSMOS: POSSIBLE WORLDS continues Carl Sagan’s...\n\n\n1074\ns1075\nMovie\nMickey's Christmas Carol\nBurny Mattinson\nAlan Young, Wayne Allwine, Hal Smith, Will Rya...\nUnited States\nNovember 12, 2019\n1983\nG\n26 min\nAnimation, Comedy, Family\nAll your Disney pals star in this retelling of..."
   }
 ]
