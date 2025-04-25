@@ -8,11 +8,19 @@ website:
   navbar:
     title: false
     logo: assets/logo6.png
-    left:
+    alt: "Lisa Lucky"
+    href: "/"
+    right:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: About
+      - text: CV
+        menu:
+          - href: english-cv.pdf
+            text: English Version
+          - href: german-cv.pdf
+            text: German Version
 
 format:
   html:
